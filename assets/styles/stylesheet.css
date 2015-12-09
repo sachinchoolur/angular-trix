@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+a {
+    color: #1e6bb8;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.btn {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0.3rem;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+}
+.btn + .btn {
+    margin-left: 1rem;
+}
+.btn:hover {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+@media screen and (min-width: 64em) {
+    .btn {
+        padding: 0.75rem 1rem;
+    }
+}
+@media screen and (min-width: 42em) and (max-width: 64em) {
+    .btn {
+        padding: 0.6rem 0.9rem;
+        font-size: 0.9rem;
+    }
+}
+@media screen and (max-width: 42em) {
+    .btn {
+        display: block;
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+    .btn + .btn {
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+}
+.page-header {
+    color: #fff;
+    text-align: center;
+    background-color: #159957;
+    background-image: linear-gradient(120deg, #155799, #159957);
+}
+@media screen and (min-width: 64em) {
+    .page-header {
+        padding: 5rem 6rem;
+    }
+}
+@media screen and (min-width: 42em) and (max-width: 64em) {
+    .page-header {
+        padding: 3rem 4rem;
+    }
+}
+@media screen and (max-width: 42em) {
+    .page-header {
+        padding: 2rem 1rem;
+    }
+}
+.project-name {
+    margin-top: 0;
+    margin-bottom: 0.1rem;
+}
+@media screen and (min-width: 64em) {
+    .project-name {
+        font-size: 3.25rem;
+    }
+}
+@media screen and (min-width: 42em) and (max-width: 64em) {
+    .project-name {
+        font-size: 2.25rem;
+    }
+}
+@media screen and (max-width: 42em) {
+    .project-name {
+        font-size: 1.75rem;
+    }
+}
+.project-tagline {
+    margin-bottom: 2rem;
+    font-weight: normal;
+    opacity: 0.7;
+}
+@media screen and (min-width: 64em) {
+    .project-tagline {
+        font-size: 1.25rem;
+    }
+}
+@media screen and (min-width: 42em) and (max-width: 64em) {
+    .project-tagline {
+        font-size: 1.15rem;
+    }
+}
+@media screen and (max-width: 42em) {
+    .project-tagline {
+        font-size: 1rem;
+    }
+}
+.main-content {
+    margin: 60px auto;
+    width: 980px;
+}
+.main-content a {
+    color: #15965a
+}
+.main-content h2 {
+    font-size: 1.25rem;
+    font-weight: normal;
+    margin: 0 0 15px;
+}
+.text-area {
+    margin-top: 40px;
+}
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #d6d6d6;
+    min-height: 54px;
+    padding: 4px 8px;
+    border-radius: 2px;
+}
+.trix-events {
+    margin-top: 5px;
+}
+.trix-events ul {
+    list-style: outside none none;
+    margin: 0;
+    padding-left: 0;
+}
+.trix-events .indicator {
+    background-color: #15965a;
+    border-radius: 50px;
+    height: 12px;
+    margin-right: 5px;
+    width: 12px;
+    transition: background-color 0.5s ease 0s;
+}
+.trix-events .label {
+    font-size: 14px;
+    transition: color 0.5s ease 0s;
+}
+.trix-events .active .indicator {
+    background-color: red;
+}
+.trix-events .active .label {
+    color: red;
+}
+.trix-events li {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+.trix-events span {
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+}
+trix-toolbar .dialogs .dialog {
+    border: 1px solid #d6d6d6;
+    border-radius: 2px;
+}
+.dialog .button_group {
+    margin-top: 0;
+}
+.link_url_fields > input {
+    border-color: #d6d6d6 !important;
+    border-radius: 2px !important;
+}
+.button_groups {
+    border-color: #d6d6d6 #d6d6d6 transparent;
+    border-image: none;
+    border-radius: 2px 2px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 5px;
+}
+trix-toolbar .button_group {
+    border-color: #d6d6d6;
+    border-radius: 2px;
+    box-shadow: none;
+    margin-bottom: 0;
+    margin-right: 2px;
+    margin-top: 5px;
+    margin-bottom: -2px;
+}
+trix-editor {
+    border-color: #d6d6d6;
+    border-radius: 0 0 3px 3px;
+    word-wrap: break-word;
+    color: #333;
+}
+trix-toolbar .button_group button {
+    border-bottom: 0 none;
+    cursor: pointer;
+    opacity: 0.75;
+    transition: opacity 0.2s ease 0s;
+}
+trix-toolbar .button_group button.active,
+trix-toolbar .button_group button.active:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+    box-shadow: 0 0 4px -1px rgba(0, 0, 0, 0.2) inset !important;
+    opacity: 1;
+}
+trix-toolbar .button_group button:hover {
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1) inset !important;
+    opacity: 1;
+}
