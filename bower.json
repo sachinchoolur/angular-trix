@@ -1,0 +1,24 @@
+{
+    "name": "angular-trix",
+    "version": "1.0.0",
+    "homepage": "https://github.com/sachinchoolur/angular-trix",
+    "authors": [
+        "Sachin N <sachi77n@gmail.com>"
+    ],
+    "description": "A rich wysiwyg text editor directive for angularjs.",
+    "main": "dist/angular-trix.js",
+    "keywords": [
+        "angular-trix",
+        "wysiwyg-editor",
+        "text-editor",
+        "directive",
+        "angularjs"
+    ],
+    "dependencies": {
+        "trix": "^0.4.0",
+        "angular": ">=1.2.0"
+    },
+    "ignore": [
+        "README.md"
+    ]
+}
