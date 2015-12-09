@@ -122,6 +122,7 @@ a:hover {
 .main-content {
     margin: 60px auto;
     width: 980px;
+    position: relative;
 }
 .main-content a {
     color: #15965a
@@ -229,4 +230,11 @@ trix-toolbar .button_group button.active:hover {
 trix-toolbar .button_group button:hover {
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1) inset !important;
     opacity: 1;
+}
+
+.share{
+    position: absolute; 
+    left: 50%; 
+    margin-left: -38px; 
+    top: -74px;
 }

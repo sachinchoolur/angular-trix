@@ -18,8 +18,13 @@
             <h2 class="project-tagline">A rich wysiwyg text editor directive for angularjs.</h2>
             <a href="https://github.com/sachinchoolur/angular-trix" class="btn">View on GitHub</a>
             <a href="https://github.com/sachinchoolur/angular-trix" class="btn">Read Documentation</a>
+            <a href="http://plnkr.co/edit/hSzwlzUmRQoUtZJke2C4?p=preview" target="_blank" class="btn">Plunker</a>
         </section>
         <section class="main-content">
+            <div class="share">
+                <a href="https://twitter.com/share" class="twitter-share-button"{count} data-url="http://sachinchoolur.github.io/angular-trix/" data-text="Angular-trix - A rich wysiwyg text editor directive for #angularjs." data-size="large" data-hashtags="Javascript">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </div>
             <div class="editor-wrap">
                 <h2>Angular-trix is a lightweight angularjs directive for <a target="_blank" href="https://github.com/basecamp/trix">trix editor</a></h2>
                 <trix-editor ng-model-options="{ updateOn: 'blur' }" spellcheck="false" class="trix-content" ng-model="trix" angular-trix trix-initialize="trixInitialize(e, editor);" trix-change="trixChange(e, editor);" trix-selection-change="trixSelectionChange(e, editor);" trix-focus="trixFocus(e, editor);" trix-blur="trixBlur(e, editor);" trix-file-accept="trixFileAccept(e, editor);" trix-attachment-add="trixAttachmentAdd(e, editor);" trix-attachment-remove="trixAttachmentRemove(e, editor);" placeholder="Write something.."></trix-editor>
