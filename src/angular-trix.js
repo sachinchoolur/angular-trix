@@ -1,3 +1,4 @@
+// https://github.com/sachinchoolur/angular-trix
 (function() {
     'use strict';
     angular.module('angularTrix', []).directive('angularTrix', function() {
