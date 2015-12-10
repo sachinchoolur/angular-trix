@@ -8,6 +8,11 @@
 
 > Angularjs directive for [trix editor](https://github.com/basecamp/trix/)
 
+![angular-trix](https://raw.githubusercontent.com/sachinchoolur/angular-trix/master/src/angular-trix.png)
+Demo
+---
+[Angular-trix demo](http://sachinchoolur.github.io/angular-trix/). [Plunker demo](http://plnkr.co/edit/hSzwlzUmRQoUtZJke2C4?p=preview) 
+
 ## Install
 
 You can get it on npm.
