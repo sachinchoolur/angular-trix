@@ -15,7 +15,7 @@
         "angularjs"
     ],
     "dependencies": {
-        "trix": "~0.4.0",
+        "trix": "latest",
         "angular": ">=1.2.0"
     },
     "ignore": [
