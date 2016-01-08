@@ -17,6 +17,8 @@
             },
             link: function(scope, element, attrs, ngModel) {
 
+                var receivedFocus;
+
                 element.on('trix-initialize', function() {
                     if (ngModel.$modelValue) {
                         element[0].editor.loadHTML(ngModel.$modelValue);
@@ -29,7 +31,13 @@
                     }
 
                     element.on('trix-change', function() {
-                        ngModel.$setViewValue(element.html());
+                        if (receivedFocus) {
+                            ngModel.$setViewValue(element.html());
+                        }
+                    });
+
+                    element.on('trix-focus', function() {
+                        receivedFocus = true;
                     });
                 };
 
