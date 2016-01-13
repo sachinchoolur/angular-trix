@@ -45,7 +45,7 @@
                                 e: e,
                                 editor: element[0].editor
                             });
-                          })
+                          });
                         }
                     });
                 };
