@@ -39,10 +39,14 @@
                             e.preventDefault();
                         }
 
-                        scope[method]({
-                            e: e,
-                            editor: element[0].editor
-                        });
+                        if(!scope.$root.$$phase) {
+                          scope.$apply(function() {
+                            scope[method]({
+                                e: e,
+                                editor: element[0].editor
+                            });
+                          });
+                        }
                     });
                 };
 
