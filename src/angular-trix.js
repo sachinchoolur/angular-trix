@@ -21,16 +21,16 @@
                     if (ngModel.$modelValue) {
                         element[0].editor.loadHTML(ngModel.$modelValue);
                     }
+
+                    element.on('trix-change', function() {
+                        ngModel.$setViewValue(element.html());
+                    });
                 });
 
                 ngModel.$render = function() {
                     if (element[0].editor) {
                         element[0].editor.loadHTML(ngModel.$modelValue);
                     }
-
-                    element.on('trix-change', function() {
-                        ngModel.$setViewValue(element.html());
-                    });
                 };
 
                 var registerEvents = function(type, method) {
