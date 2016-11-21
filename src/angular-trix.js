@@ -29,7 +29,7 @@
                     }
 
                     element.on('trix-change', function() {
-                        ngModel.$setViewValue(element.html());
+                        ngModel.$setViewValue(element[0].inputElement.value);
                     });
                 };
 
