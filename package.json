@@ -26,7 +26,11 @@
     "main": "dist/angular-trix.js",
     "license": "MIT",
     "scripts": {
-        "test": "grunt"
+        "test": "npm-run-all -p -r http-server protractor",
+        "http-server": "http-server -a localhost -p 8000 -c-1 .",
+        "update-webdriver": "webdriver-manager update",
+        "preprotractor": "npm run update-webdriver",
+        "protractor": "protractor e2e-tests/protractor.conf.js"
     },
     "dependencies": {
         "trix": "latest",
@@ -41,8 +45,11 @@
         "grunt-contrib-qunit": "^0.5.1",
         "grunt-contrib-uglify": "^0.7.0",
         "grunt-contrib-watch": "^0.6.1",
+        "http-server": "^0.10.0",
         "jshint-stylish": "^1.0.0",
         "load-grunt-tasks": "^2.0.0",
+        "npm-run-all": "^4.1.2",
+        "protractor": "^5.2.2",
         "time-grunt": "^1.0.0"
     }
 }

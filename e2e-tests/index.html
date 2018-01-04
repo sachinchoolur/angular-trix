@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html data-ng-app="app">
+  <head>
+    <title>angular-trix tests</title>
+    <link rel="stylesheet" type="text/css" href="../node_modules/trix/dist/trix.css" />
+  </head>
+  <body style="font-family: sans-serif;">
+
+    <h1>angular-trix e2e tests</h1>
+
+    <form name="form">
+
+      <trix-editor id="editor" angular-trix name="text" ng-model="modelText"></trix-editor>
+
+      <br /><br />
+
+      <div>
+        <strong>ng-model:</strong>
+        <span id="modelText">{{modelText}}</span>
+      </div>
+      <div>
+        <strong>$pristine</strong>
+        <span id="pristine">{{form.text.$pristine}}</span>
+      </div>
+
+      <br /><br />
+
+      <button id="setSampleText" ng-click="modelText='the quick brown fox'">Set sample Text</button>
+
+    </form>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/trix/dist/trix.js"></script>
+    <script src="../src/angular-trix.js"></script>
+    <script>
+      angular.module('app', ['angularTrix']);
+    </script>
+  <body>
+</html>
