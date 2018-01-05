@@ -17,4 +17,10 @@ describe('angular-trix', function() {
     expect(element(by.id('modelText')).getText()).toEqual('the quick brown fox');
   });
 
+  // https://github.com/sachinchoolur/angular-trix/pull/23
+  it('uses proper serialization format', function() {
+    element(by.id('editor')).sendKeys('the quick brown fox');
+    expect(element(by.id('modelText')).getText()).toEqual('<div>the quick brown fox</div>');
+  });
+
 });
