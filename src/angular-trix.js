@@ -23,22 +23,23 @@
                     if (ngModel.$modelValue) {
                         element[0].editor.loadHTML(ngModel.$modelValue);
                     }
+
+                });
+
+                element.on('trix-change', function() {
+                    if (receivedFocus) {
+                        ngModel.$setViewValue(element.html());
+                    }
+                });
+
+                element.on('trix-focus', function() {
+                    receivedFocus = true;
                 });
 
                 ngModel.$render = function() {
                     if (element[0].editor) {
                         element[0].editor.loadHTML(ngModel.$modelValue);
                     }
-
-                    element.on('trix-change', function() {
-                        if (receivedFocus) {
-                            ngModel.$setViewValue(element.html());
-                        }
-                    });
-
-                    element.on('trix-focus', function() {
-                        receivedFocus = true;
-                    });
                 };
 
                 var registerEvents = function(type, method) {
