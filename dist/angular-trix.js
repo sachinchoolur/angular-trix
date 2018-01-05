@@ -1,6 +1,7 @@
-/*! angular-trix - v1.0.0 - 2015-12-09
+/*! angular-trix - v1.0.2 - 2016-09-09
 * https://github.com/sachinchoolur/angular-trix
-* Copyright (c) 2015 Sachin; Licensed MIT */
+* Copyright (c) 2016 Sachin; Licensed MIT */
+// https://github.com/sachinchoolur/angular-trix
 (function() {
     'use strict';
     angular.module('angularTrix', []).directive('angularTrix', function() {
@@ -23,16 +24,16 @@
                     if (ngModel.$modelValue) {
                         element[0].editor.loadHTML(ngModel.$modelValue);
                     }
+
+                    element.on('trix-change', function() {
+                        ngModel.$setViewValue(element.html());
+                    });
                 });
 
                 ngModel.$render = function() {
                     if (element[0].editor) {
                         element[0].editor.loadHTML(ngModel.$modelValue);
                     }
-
-                    element.on('trix-change', function() {
-                        ngModel.$setViewValue(element.html());
-                    });
                 };
 
                 var registerEvents = function(type, method) {
