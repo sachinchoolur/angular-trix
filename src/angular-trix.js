@@ -28,7 +28,7 @@
 
                 element.on('trix-change', function() {
                     if (receivedFocus) {
-                        ngModel.$setViewValue(element.html());
+                        ngModel.$setViewValue(element[0].inputElement.value);
                     }
                 });
 
